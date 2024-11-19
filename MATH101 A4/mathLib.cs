@@ -38,7 +38,7 @@ namespace MATH101_A4
 
     abstract class mathLib
     {
-        private readonly Vec defaultVec = new Vec(0.0f,0.0f);
+        
         internal static Vec scaleVector(Vec vector, float scale)
         {
             float X = vector.X * scale;
