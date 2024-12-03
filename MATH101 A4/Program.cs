@@ -12,8 +12,6 @@ namespace MATH101_A4
             question5();
         }
 
-
-
         static void question1()
         {
             Random random = new Random();

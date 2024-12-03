@@ -9,7 +9,7 @@ namespace MATH101_A4
 
     struct Vec 
     {
-        public float X=0;
+        public float X;
         public float Y;
         public Vec(float X, float Y)
         {
@@ -37,8 +37,7 @@ namespace MATH101_A4
 
 
     abstract class mathLib
-    {
-        
+    {        
         internal static Vec scaleVector(Vec vector, float scale)
         {
             float X = vector.X * scale;
@@ -48,8 +47,6 @@ namespace MATH101_A4
             Vec returningVector = new(X, Y);
             return returningVector;
         }
-
-
         internal static Vec vectorFrom2Points(Vec point1,Vec point2)
         {
             float X = point2.X - point1.X;
@@ -57,7 +54,6 @@ namespace MATH101_A4
             Vec newVector = new (X, Y);
             return newVector;
         }
-
         internal static Vec addVectorsTogether(Vec v1 , Vec v2, Vec v3, Vec v4)
         {
             float X = v1.X + v2.X + v3.X + v4.X;
@@ -73,16 +69,11 @@ namespace MATH101_A4
         {
             return addVectorsTogether(v1, v2, v3, new Vec());
         }
-
-
-
-
         internal static float Magnitude(Vec vector)
         {
             float Magnitude = MathF.Sqrt((vector.X * vector.X) + (vector.Y * vector.Y));
             return Magnitude;
         }
-
         internal static Vec Normalize(Vec vector)
         {
             float Magnitude = mathLib.Magnitude(vector);
@@ -93,7 +84,6 @@ namespace MATH101_A4
 
             return normalized;
         }
-
         internal static Vec genFromAngle(float Degrees, float magnitude = 5.0f)
         {
             // degrees to radians
@@ -106,9 +96,6 @@ namespace MATH101_A4
 
             return returningVector;
         }
-
-
-
         internal static float Collision(Obj object1, Obj object2)
         {
             Vec vectorBetween2Points = vectorFrom2Points(object1.positionFromOrigin, object2.positionFromOrigin);
@@ -122,7 +109,6 @@ namespace MATH101_A4
 
             return collision;
         }
-
         internal static float DotProduct(Vec vector1, Vec vector2)
         {
 
